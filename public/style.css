@@ -1,0 +1,33 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.container{
+    background: linear-gradient(45deg, red, pink, orange, teal, grey);
+    left: 50%;
+    top: 50%;
+    width: 60%;
+    height: 60%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn{
+    padding: 4px 15px;
+    font-size: 18px;
+    margin: 18px;
+    background: transparent;
+    border-radius: 8px;
+    outline: none;
+    border: 2px solid white;
+}
+
+.btn a{
+    color: white;
+    text-decoration: none;
+}
