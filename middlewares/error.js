@@ -17,7 +17,7 @@ err.statusCode = err.statusCode || "500";
     });
 };
 
-module.exports = ErrorHandler
+// module.exports = ErrorHandler;
 
-module.exports = errorMiddleware;
+module.exports = {errorMiddleware, ErrorHandler};
 

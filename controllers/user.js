@@ -1,11 +1,10 @@
 const User = require("../models/user");
 const bcrypt = require("bcrypt");
 const sendCookies = require("../utils/feature");
-const ErrorHandler = require("../middlewares/error");
+const {ErrorHandler} = require("../middlewares/error");
 
 
 const login = async (req,res) => {
-    console.log("working")
     try {
         res.render("login")
     } catch (error) {
@@ -51,7 +50,7 @@ const newUser = async (req,res,next) => {
 
         if(user) return next(new ErrorHandler("User already exist", 404));
 
-        const hashedPassword = await bcrypt.hash(password, 10)
+        const hashedPassword = await bcrypt.hash(password, 10);
 
         user = await User.create({name, email, password:hashedPassword});
 

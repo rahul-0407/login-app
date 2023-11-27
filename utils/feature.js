@@ -8,8 +8,7 @@ const sendCookies = (user,res, statusCode) => {
         res.status(statusCode).cookie("token", token ,{
             httpOnly:true,
             maxAge: 15 * 60 * 1000,
-        })
-        
+        }) 
 
 }
 

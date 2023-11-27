@@ -4,7 +4,7 @@ const path = require("path")
 const {config}  =require("dotenv");
 const userRouter = require("./routes/user");
 const cookieParser = require("cookie-parser")
-const errorMiddleware = require("./middlewares/error")
+const {errorMiddleware} = require("./middlewares/error")
 
 config({
     path: "./db/config.env"
@@ -24,7 +24,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.static("public"));
 
 // app.use(userRouter);
-app.use("/api/v1/user",userRouter);
+app.use(userRouter);
 
 
 app.get("/", (req,res) => {
